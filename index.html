@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ទិញឥវ៉ាន់អនឡាញ | ហាងទំនិញខ្មែរ</title>
+    <!-- Google Fonts: Khmer + Supporting Latin -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Khmer&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo" id="logoHome">
+                <i class="fas fa-store"></i> ហាងទំនិញខ្មែរ
+            </div>
+            <div class="search-bar" id="searchContainer">
+                <input type="text" id="searchInput" placeholder="ស្វែងរកផលិតផល...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-page="home" class="nav-link active">ទំព័រដើម</a></li>
+                <li><a href="#" data-page="products" class="nav-link">ផលិតផល</a></li>
+                <li><a href="#" data-page="about" class="nav-link">អំពីយើង</a></li>
+                <li><a href="#" data-page="contact" class="nav-link">ទំនាក់ទំនង</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<main class="page-container" id="mainContent">
+    <div class="container">
+        <!-- dynamic pages injected here inside container for proper centering -->
+        <div id="dynamicContent"></div>
+    </div>
+</main>
+
+<!-- cart sidebar -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <span><i class="fas fa-shopping-basket"></i> កន្ត្រកទំនិញ</span>
+        <i class="fas fa-times" id="closeCart" style="cursor:pointer;"></i>
+    </div>
+    <div class="cart-items" id="cartItemsList"><div class="empty-cart">កន្ត្រកទទេ</div></div>
+    <div class="cart-footer">
+        <div class="total"><span>សរុបទឹកប្រាក់:</span><span id="cartTotal">0 ៛</span></div>
+        <button class="checkout-btn" id="checkoutBtn"><i class="fas fa-credit-card"></i> ទិញឥឡូវនេះ</button>
+    </div>
+</div>
+<div id="toastMsg" class="toast-msg">បានបន្ថែមទៅកន្ត្រក!</div>
+
+<script src="./script.js"></script>
+ 
+</body>
+</html>
